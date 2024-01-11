@@ -5,7 +5,7 @@ import lisaVanillaImg from "./assets/food-menu/lisa-vanilla.svg"
 import blueberryMargeImg from "./assets/food-menu/blueberry-marge.svg"
 import maggiesFavoriteImg from "./assets/food-menu/maggies-favorite.svg"
 
-const menu = new Content('div', 'div', 'div', 'div', 'div')
+const menuNav = new Content('div', 'div', 'div', 'div', 'div')
 
 class Donut {
     constructor(donutTitle, imgUrl) {
@@ -30,12 +30,12 @@ maggiesFavorite.description = "A classic donut filled with luscious cream, toppe
 const donutArr = [classicHomer, chocoBart, lisaVanilla, blueberryMarge, maggiesFavorite ]
 
 function createMenu() {
-    menu.createParents()
+    menuNav.createParents()
     let imgDOM = []
     let divDOM = []
-    for(let i = 0; i < menu.parentElem.length; i++) {
-        menu.parentElem[i].classList.add("donut-container")
-        let parentDiv = menu.parentElem[i];
+    for(let i = 0; i < menuNav.parentElem.length; i++) {
+        menuNav.parentElem[i].classList.add("donut-container")
+        let parentDiv = menuNav.parentElem[i];
         let img = document.createElement('img')
         let div = document.createElement('div')
         parentDiv.appendChild(img)
@@ -81,4 +81,4 @@ function createMenu() {
 
 }
 
-export {menu, createMenu}
+export {menuNav, createMenu}
