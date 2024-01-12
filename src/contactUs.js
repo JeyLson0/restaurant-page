@@ -1,4 +1,4 @@
-import {Content, midContainer} from "./mid-content"
+import {Content} from "./contentClass"
 
 const contactUsNav = new Content('div', 'div')
 
@@ -25,4 +25,4 @@ function createContactUs() {
     paraArr[1].textContent = "+1 012 345 6789"
 }
 
-export {createContactUs}
+export {createContactUs, contactUsNav}

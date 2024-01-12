@@ -1,4 +1,4 @@
-import {midContainer, Content} from "./mid-content"
+import {midContainer, Content} from "./contentClass"
 import chocoBartImg from "./assets/food-menu/choco-bart.svg"
 import classicHomerImg from "./assets/food-menu/classic-homer.svg"
 import lisaVanillaImg from "./assets/food-menu/lisa-vanilla.svg"
@@ -33,6 +33,7 @@ function createMenu() {
     menuNav.createParents()
     let imgDOM = []
     let divDOM = []
+    
     for(let i = 0; i < menuNav.parentElem.length; i++) {
         menuNav.parentElem[i].classList.add("donut-container")
         let parentDiv = menuNav.parentElem[i];
@@ -62,7 +63,8 @@ function createMenu() {
 
     let priceDiv = document.createElement('div')
     priceDiv.classList.add('price-list')
-    midContainer.appendChild(priceDiv)
+    menuNav.parentElem.push(priceDiv);
+    midContainer.appendChild(priceDiv);
     for(let i = 0; i < 3; i++){
         let p = document.createElement('p')
         if(i == 0) {
@@ -78,6 +80,9 @@ function createMenu() {
             priceDiv.appendChild(p)
         }
     }
+
+    console.log(imgDOM)
+    console.log(divDOM)
 
 }
 
